@@ -1,6 +1,6 @@
 export default {
-    title: "Event",
-    name: "event",
+    title: "Page",
+    name: "page",
     type: "document",
     fields: [
         {
@@ -10,13 +10,8 @@ export default {
             validation: Rule => Rule.required()
         },
         {
-            title: "Date & time",
-            name: "dateTime",
-            type: "datetime"
-        },
-        {
-            title: "Description",
-            name: "about",
+            title: "Content",
+            name: "content",
             type: "contentEditor"
         },
         {

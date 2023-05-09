@@ -1,14 +1,8 @@
 // ICONS
 import {
-    MdImage,
     MdHome,
-    MdMail,
     MdEvent,
-    MdNewspaper,
-    MdQuestionAnswer,
-    MdFileCopy,
-    MdTag,
-    MdTextFields
+    MdEditDocument
 } from "react-icons/md"
 
 export default (S) =>
@@ -16,24 +10,24 @@ export default (S) =>
         .title("after.berlin")
         .items([
             S.listItem()
-                .title("About")
+                .title("Frontpage")
                 .icon(MdHome)
                 .child(
                     S.editor()
-                        .id("about")
-                        .title("about")
-                        .schemaType("about")
-                        .documentId("about")
+                        .id("frontpage")
+                        .title("frontpage")
+                        .schemaType("frontpage")
+                        .documentId("frontpage")
                 ),
             S.listItem()
-                .title("Byline")
-                .icon(MdTextFields)
+                .title("Pages")
+                .icon(MdEditDocument)
                 .child(
-                    S.editor()
-                        .id("Byline")
-                        .title("byline")
-                        .schemaType("byline")
-                        .documentId("byline")
+                    S.documentList()
+                        .title('Pages')
+                        .showIcons(true)
+                        .filter("_type == $type")
+                        .params({ type: "page" })
                 ),
             S.listItem()
                 .title('Events')

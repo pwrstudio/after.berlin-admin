@@ -1,8 +1,13 @@
 export default {
-    title: "About",
-    name: "about",
+    title: "Frontpage",
+    name: "frontpage",
     type: "document",
     fields: [
+        {
+            title: "Byline",
+            name: "byline",
+            type: "text"
+        },
         {
             title: "About",
             name: "about",
