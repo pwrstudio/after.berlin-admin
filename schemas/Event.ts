@@ -12,7 +12,8 @@ export default {
         {
             title: "Date & time",
             name: "dateTime",
-            type: "datetime"
+            type: "datetime",
+            validation: Rule => Rule.required()
         },
         {
             title: "Description",

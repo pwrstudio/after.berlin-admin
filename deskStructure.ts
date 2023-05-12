@@ -15,7 +15,7 @@ export default (S) =>
                 .child(
                     S.editor()
                         .id("frontpage")
-                        .title("frontpage")
+                        .title("Frontpage")
                         .schemaType("frontpage")
                         .documentId("frontpage")
                 ),
