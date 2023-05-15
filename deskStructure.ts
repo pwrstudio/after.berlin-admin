@@ -2,6 +2,7 @@
 import {
     MdHome,
     MdEvent,
+    MdList,
     MdEditDocument
 } from "react-icons/md"
 
@@ -38,5 +39,15 @@ export default (S) =>
                         .showIcons(true)
                         .filter("_type == $type")
                         .params({ type: "event" })
-                )
+                ),
+            S.listItem()
+                .title("Event list")
+                .icon(MdList)
+                .child(
+                    S.editor()
+                        .id("event-list")
+                        .title("Event list")
+                        .schemaType("eventList")
+                        .documentId("eventList")
+                ),
         ])

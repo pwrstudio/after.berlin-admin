@@ -9,9 +9,16 @@ export default {
             type: "text"
         },
         {
-            title: "About",
-            name: "about",
-            type: "contentEditor"
+            title: "Page links",
+            type: "array",
+            name: "pageLinks",
+            of: [
+                {
+                    title: "Page link",
+                    type: "reference",
+                    to: [{ type: "page" }, { type: "eventList" }]
+                }
+            ]
         },
         {
             title: "Address",
