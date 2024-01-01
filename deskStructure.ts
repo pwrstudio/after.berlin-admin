@@ -3,7 +3,8 @@ import {
     MdHome,
     MdEvent,
     MdList,
-    MdEditDocument
+    MdEditDocument,
+    MdMusicNote
 } from "react-icons/md"
 
 export default (S) =>
@@ -49,5 +50,15 @@ export default (S) =>
                         .title("Event list")
                         .schemaType("eventList")
                         .documentId("eventList")
+                ),
+            S.listItem()
+                .title('Music')
+                .icon(MdMusicNote)
+                .child(
+                    S.documentList()
+                        .title('Music')
+                        .showIcons(true)
+                        .filter("_type == $type")
+                        .params({ type: "music" })
                 ),
         ])
