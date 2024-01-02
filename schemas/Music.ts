@@ -52,8 +52,8 @@ export default {
             type: "date",
         },
         {
-            title: "Description",
-            name: "about",
+            title: "Content",
+            name: "content",
             type: "contentEditor"
         },
         {

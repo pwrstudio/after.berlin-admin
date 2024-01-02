@@ -4,7 +4,8 @@ import {
     MdEvent,
     MdList,
     MdEditDocument,
-    MdMusicNote
+    MdMusicNote,
+    MdLibraryMusic
 } from "react-icons/md"
 
 export default (S) =>
@@ -21,6 +22,7 @@ export default (S) =>
                         .schemaType("frontpage")
                         .documentId("frontpage")
                 ),
+            S.divider(),
             S.listItem()
                 .title("Pages")
                 .icon(MdEditDocument)
@@ -30,6 +32,17 @@ export default (S) =>
                         .showIcons(true)
                         .filter("_type == $type")
                         .params({ type: "page" })
+                ),
+            S.divider(),
+            S.listItem()
+                .title("Event list page")
+                .icon(MdList)
+                .child(
+                    S.editor()
+                        .id("event-list")
+                        .title("Event list page")
+                        .schemaType("eventList")
+                        .documentId("eventList")
                 ),
             S.listItem()
                 .title('Events')
@@ -41,15 +54,16 @@ export default (S) =>
                         .filter("_type == $type")
                         .params({ type: "event" })
                 ),
+            S.divider(),
             S.listItem()
-                .title("Event list")
-                .icon(MdList)
+                .title("Music library page")
+                .icon(MdLibraryMusic)
                 .child(
                     S.editor()
-                        .id("event-list")
-                        .title("Event list")
-                        .schemaType("eventList")
-                        .documentId("eventList")
+                        .id("musicLibrary")
+                        .title("Music library page")
+                        .schemaType("musicLibrary")
+                        .documentId("musicLibrary")
                 ),
             S.listItem()
                 .title('Music')

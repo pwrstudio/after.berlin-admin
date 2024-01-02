@@ -16,7 +16,7 @@ export default {
                 {
                     title: "Page link",
                     type: "reference",
-                    to: [{ type: "page" }, { type: "eventList" }]
+                    to: [{ type: "page" }, { type: "eventList" }, { type: "musicLibrary" }]
                 }
             ]
         },
