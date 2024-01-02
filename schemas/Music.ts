@@ -1,5 +1,6 @@
 // ICONS
 import {
+    MdLink,
     MdMusicNote,
 } from "react-icons/md"
 
@@ -16,10 +17,26 @@ export default {
             validation: (Rule: any) => Rule.required()
         },
         {
-            title: "Link",
-            name: "link",
-            type: "url",
-            validation: (Rule: any) => Rule.required()
+            title: "Links",
+            name: "links",
+            type: "array",
+            of: [{
+                icon: MdLink,
+                name: "link",
+                type: "object",
+                fields: [
+                    {
+                        title: "Link text",
+                        name: "linkText",
+                        type: "string",
+                    },
+                    {
+                        title: "Link",
+                        name: "link",
+                        type: "url",
+                    }
+                ],
+            }],
         },
         {
             title: "Interpreter",
