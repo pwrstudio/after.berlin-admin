@@ -9,12 +9,26 @@ export default {
     icon: MdMusicNote,
     name: "music",
     type: "document",
+    initialValue: {
+        media: "physical",
+    },
     fields: [
         {
             title: "Title",
             name: "title",
             type: "string",
             validation: (Rule: any) => Rule.required()
+        },
+        {
+            title: "Media",
+            name: "media",
+            type: "string",
+            options: {
+                list: [
+                    { title: "Physical", value: "physical" },
+                    { title: "Digital", value: "digital" }
+                ],
+            },
         },
         {
             title: "Links",
