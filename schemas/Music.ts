@@ -28,6 +28,7 @@ export default {
                     { title: "Physical", value: "physical" },
                     { title: "Digital", value: "digital" }
                 ],
+                layout: "radio",
             },
         },
         {
